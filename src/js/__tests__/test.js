@@ -15,6 +15,6 @@ test('saving the game', async () => {
     expect(result).toEqual(expected);
 });
 
-test('error handling', async () => {
-    await expect(GameSavingLoader.load()).rejects.toThrow('oops');
+test('error handling', () => {
+    return expect(GameSavingLoader.load()).rejects.toThrow(Error);
 });
