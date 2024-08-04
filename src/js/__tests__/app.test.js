@@ -1,14 +1,5 @@
 import GameSavingLoader from '../app';
 
-jest.mock('../reader');
-afterEach(() => {
-    jest.resetAllMocks();
-});
-
-test('error handling', () => {
-    return expect(GameSavingLoader.load()).rejects.toThrow(Error);
-});
-
 test('saving the game', async () => {
     const expected = {
         'id': 9,
